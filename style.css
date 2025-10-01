@@ -392,34 +392,36 @@ iframe {
   object-fit: cover;
 }
 
-/* الحاوية اللي فيها الفيديوهات */
+/* منع الصفحة كلها تتحرك يمين/شمال */
+body, html {
+  overflow-x: hidden;
+}
+
+/* الفيديوهات */
 .videos-scroll {
   display: flex;
-  overflow-x: auto;    /* يخلي بس الفيديوهات تتحرك يمين/شمال */
+  overflow-x: auto;    
   gap: 15px;
   padding: 10px 0;
   max-width: 100%;
-  scroll-snap-type: x mandatory; /* يخلي الفيديو يمسك مكانه */
+  scroll-snap-type: x mandatory;
 }
 
-/* كل فيديو */
 .reel {
   flex: 0 0 auto;
-  width: 315px;   /* عرض فيديو شورتس */
-  height: 560px;  /* طول فيديو شورتس */
+  width: 315px;
+  height: 560px;
   border-radius: 15px;
   overflow: hidden;
   position: relative;
   scroll-snap-align: start;
-  background: #000; /* خلفية سودة للفيديو */
+  background: #000;
 }
 
-/* ضبط iframe */
 .reel iframe {
   width: 100%;
   height: 100%;
   border: none;
   border-radius: 15px;
 }
-
 
