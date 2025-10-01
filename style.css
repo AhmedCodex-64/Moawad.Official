@@ -379,6 +379,11 @@ iframe {
 .scroll-container iframe:first-child {
   animation: nudge 1.5s ease-in-out infinite alternate;
 }
+html, body {
+  overflow-x: hidden; /* يمنع الصفحة كلها من التحرك أفقياً */
+  margin: 0;
+  padding: 0;
+}
 
 @keyframes nudge {
   0%   { transform: translateX(0); }
@@ -420,6 +425,23 @@ iframe {
   height: 100%;
   border: none;
   object-fit: cover; /* يحافظ على نسبة الريلز */
+}
+
+.scroll-container,
+.videos-scroll {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto; /* فقط للسحب داخل الكونتينر */
+  scroll-behavior: smooth;
+  padding: 10px; /* خلي padding داخلي عشان العنصر الأول ما يختفيش */
+  box-sizing: content-box; /* عشان padding ما يضيعش مساحة العنصر */
+}
+
+.scroll-container img,
+.videos-scroll iframe {
+  flex: 0 0 auto; /* يمنع العنصر من الانكماش */
+  border-radius: 15px;
+  object-fit: cover;
 }
 
 
