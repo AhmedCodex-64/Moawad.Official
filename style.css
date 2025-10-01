@@ -399,35 +399,29 @@ body, html {
   padding: 0;
 }
 
-/* الحاوية للصور والفيديوهات */
-.scroll-container {
+/* حاوية الفيديو */
+.videos-scroll {
   display: flex;
+  gap: 20px; /* مسافة بين الفيديوهات */
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 15px;
-
-  /* padding عشان أول وآخر عنصر يبانوا كامل فالنص */
-  padding: 0 calc(50% - 160px);  /* 160px = نص عرض العنصر */
+  padding: 10px 0;
 }
 
-/* كل عنصر (صورة أو فيديو) */
-.item {
-  flex: 0 0 auto;
-  width: 560px;     /* أو أي عرض إنت عايزه */
-  height: 330px;    /* للطول */
-  scroll-snap-align: center;
-  border-radius: 15px;
-  overflow: hidden;
-  background: #000;
-  object-fit: cover;
+.reel {
+  flex: 0 0 auto; /* يمنع الفيديو من التمدد */
+  width: 360px;    /* عرض الفيديو العمودي */
+  height: 640px;   /* ارتفاع الفيديو العمودي */
+  position: relative;
 }
 
-/* لو فيديو */
-.item iframe {
+.reel iframe {
+  position: absolute;
   width: 100%;
   height: 100%;
-  border: none;
+  object-fit: cover; /* يحافظ على نسبة العرض للارتفاع */
+  border-radius: 10px; /* اختياري لتجميل الحواف */
 }
+
 
 
 
