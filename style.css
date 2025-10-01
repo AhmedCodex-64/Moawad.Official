@@ -392,28 +392,27 @@ iframe {
   object-fit: cover;
 }
 
-/* الكونتينر للفيديوهات */
+/* الحاوية الرئيسية للفيديوهات */
 #videos .scroll-container {
   display: flex;
-  overflow-x: auto;   /* بس الفيديوهات تتحرك */
-  gap: 15px;
+  overflow-x: auto;   /* يخلي الفيديوهات تتحرك أفقي */
+  gap: 15px;          /* مسافة بين الفيديوهات */
   padding: 10px 0;
-  max-width: 100%;    /* عشان مايكبرش عن الصفحة */
 }
 
-/* كل فيديو */
-.reel {
-  flex: 0 0 auto;
-  width: 315px;       /* العرض بتاع الشورتس */
-  height: 560px;      /* الطول بتاع الشورتس */
+/* كل فيديو جوه كارد عمودي */
+.scroll-container.videos .reel {
+  position: relative;
+  width: 315px;   /* عرض الشورتس */
+  height: 560px;  /* طول الشورتس */
+  flex-shrink: 0;
   border-radius: 15px;
   overflow: hidden;
-  position: relative;
-  background: black; /* لو الفيديو بيحمل */
+  margin: 0 10px;
 }
 
-/* iframe جوا الفيديو */
-.reel iframe {
+/* ضبط iframe جوا الكارد */
+.scroll-container.videos .reel iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -422,4 +421,5 @@ iframe {
   border: none;
   border-radius: 15px;
 }
+
 
