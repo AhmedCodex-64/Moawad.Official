@@ -404,23 +404,20 @@ body, html {
 }
 
 /* الفيديوهات */
+/* الفيديوهات */
 .videos-scroll {
   display: flex;
-  overflow-x: auto;    
-  gap: 15px;
-  padding: 10px 0;
-  max-width: 100%;
-  scroll-snap-type: x mandatory;
+  flex-direction: column;   /* يخلي العناصر تحت بعض */
+  align-items: center;      /* يخليهم في النص */
+  gap: 30px;                /* مسافة بين كل فيديو والتاني */
+  padding: 20px 0;
 }
 
 .reel {
-  flex: 0 0 auto;
   width: 315px;
   height: 560px;
   border-radius: 15px;
   overflow: hidden;
-  position: relative;
-  scroll-snap-align: start;
   background: #000;
 }
 
@@ -430,6 +427,7 @@ body, html {
   border: none;
   border-radius: 15px;
 }
+
 
 
 
