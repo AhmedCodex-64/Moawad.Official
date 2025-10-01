@@ -413,8 +413,8 @@ body, html {
 /* كل عنصر (صورة أو فيديو) */
 .item {
   flex: 0 0 auto;
-  width: 320px;     /* أو أي عرض إنت عايزه */
-  height: 560px;    /* للطول */
+  width: 1080px;     /* أو أي عرض إنت عايزه */
+  height: 1920px;    /* للطول */
   scroll-snap-align: center;
   border-radius: 15px;
   overflow: hidden;
@@ -427,5 +427,6 @@ body, html {
   height: 100%;
   border: none;
 }
+
 
 
