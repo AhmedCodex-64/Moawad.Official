@@ -409,7 +409,7 @@ body, html {
   display: flex;
   flex-direction: column;   /* يخليهم تحت بعض */
   align-items: center;      /* يحطهم في النص */
-   margin-bottom: 20px; /* يعمل مسافة بين الفيديوهات */
+   margin-bottom: 35px; /* يعمل مسافة بين الفيديوهات */
 }
 
 /* آخر فيديو من غير margin */
@@ -434,6 +434,7 @@ body, html {
 }
 
 }
+
 
 
 
