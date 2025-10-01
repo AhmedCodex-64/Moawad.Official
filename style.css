@@ -392,40 +392,40 @@ iframe {
   object-fit: cover;
 }
 
-/* منع أي سكرول للصفحة كلها */
+/* منع سكرول للصفحة نفسها */
 body, html {
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-/* حاوية الفيديوهات */
-.videos-scroll {
+/* الحاوية للصور والفيديوهات */
+.scroll-container {
   display: flex;
-  overflow-x: auto;    
-  gap: 15px;
-  padding: 10px 0;
-  max-width: 100%;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
+  gap: 15px;
 
-  justify-content: center; /* يخلي أول فيديو يبدأ من النص */
+  /* padding عشان أول وآخر عنصر يبانوا كامل فالنص */
+  padding: 0 calc(50% - 160px);  /* 160px = نص عرض العنصر */
 }
 
-/* كل فيديو */
-.reel {
+/* كل عنصر (صورة أو فيديو) */
+.item {
   flex: 0 0 auto;
-  width: 315px;
-  height: 560px;
+  width: 320px;     /* أو أي عرض إنت عايزه */
+  height: 560px;    /* للطول */
+  scroll-snap-align: center;
   border-radius: 15px;
   overflow: hidden;
-  position: relative;
-  scroll-snap-align: start;
   background: #000;
 }
 
-/* iframe جوا الفيديو */
-.reel iframe {
+/* لو فيديو */
+.item iframe {
   width: 100%;
   height: 100%;
   border: none;
-  border-radius: 15px;
 }
+
 
