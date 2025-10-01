@@ -389,60 +389,49 @@ html, body {
   0%   { transform: translateX(0); }
   100% { transform: translateX(10px); }
 }
-/* Scroll الصور */
-.scroll-container {
-  display: flex;
-  gap: 15px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 10px 0;
-}
-.scroll-container img {
-  border-radius: 15px;
-  max-height: 250px;
-  flex-shrink: 0;
-  object-fit: cover;
+/* يمنع الصفحة نفسها من التحرك أفقياً */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-/* Scroll الفيديوهات */
-.videos-scroll {
+/* الكونتينر الأفقي للفيديوهات */
+.videos-scroll,
+.scroll-container {
   display: flex;
   gap: 20px;
-  overflow-x: auto;
+  overflow-x: auto; /* فقط السحب داخل الكونتينر */
   scroll-behavior: smooth;
-  padding: 10px 0;
+  padding: 10px 15px; /* padding داخلي ليظهر العنصر الأول */
+  box-sizing: content-box;
 }
+
+/* كل فيديو */
 .reel {
-  flex: 0 0 auto;
-  width: 360px;
-  height: 640px;
+  flex: 0 0 auto; /* يمنع الفيديو من الانكماش */
+  width: 360px;   
+  height: 640px;  
   border-radius: 15px;
   overflow: hidden;
   background: #000;
 }
+
 .reel iframe {
   width: 100%;
   height: 100%;
   border: none;
-  object-fit: cover; /* يحافظ على نسبة الريلز */
+  object-fit: cover;
 }
 
-.scroll-container,
-.videos-scroll {
-  display: flex;
-  gap: 15px;
-  overflow-x: auto; /* فقط للسحب داخل الكونتينر */
-  scroll-behavior: smooth;
-  padding: 10px; /* خلي padding داخلي عشان العنصر الأول ما يختفيش */
-  box-sizing: content-box; /* عشان padding ما يضيعش مساحة العنصر */
-}
-
-.scroll-container img,
-.videos-scroll iframe {
-  flex: 0 0 auto; /* يمنع العنصر من الانكماش */
+/* أي صورة في scroll-container */
+.scroll-container img {
+  flex: 0 0 auto;
+  max-height: 250px;
   border-radius: 15px;
   object-fit: cover;
 }
+
 
 
 
