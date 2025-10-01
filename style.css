@@ -389,31 +389,38 @@ html, body {
   0%   { transform: translateX(0); }
   100% { transform: translateX(10px); }
 }
-/* يمنع الصفحة نفسها من التحرك أفقياً */
-html, body {
-  margin: 0;
-  padding: 0;
+
+/* ستايل الصور */
+.scroll-container img {
+  border-radius: 15px;
+  max-height: 250px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* منع الصفحة كلها تتحرك يمين/شمال */
+body, html {
   overflow-x: hidden;
 }
 
-/* الكونتينر الأفقي للفيديوهات */
-.videos-scroll,
-.scroll-container {
+/* الفيديوهات */
+.videos-scroll {
   display: flex;
-  gap: 20px;
-  overflow-x: auto; /* فقط السحب داخل الكونتينر */
-  scroll-behavior: smooth;
-  padding: 10px 15px; /* padding داخلي ليظهر العنصر الأول */
-  box-sizing: content-box;
+  overflow-x: auto;    
+  gap: 15px;
+  padding: 10px 0;
+  max-width: 100%;
+  scroll-snap-type: x mandatory;
 }
 
-/* كل فيديو */
 .reel {
-  flex: 0 0 auto; /* يمنع الفيديو من الانكماش */
-  width: 360px;   
-  height: 640px;  
+  flex: 0 0 auto;
+  width: 315px;
+  height: 560px;
   border-radius: 15px;
   overflow: hidden;
+  position: relative;
+  scroll-snap-align: start;
   background: #000;
 }
 
@@ -421,16 +428,9 @@ html, body {
   width: 100%;
   height: 100%;
   border: none;
-  object-fit: cover;
+  border-radius: 15px;
 }
 
-/* أي صورة في scroll-container */
-.scroll-container img {
-  flex: 0 0 auto;
-  max-height: 250px;
-  border-radius: 15px;
-  object-fit: cover;
-}
 
 
 
