@@ -409,8 +409,12 @@ body, html {
   display: flex;
   flex-direction: column;   /* يخليهم تحت بعض */
   align-items: center;      /* يحطهم في النص */
-  gap: 40px;                /* مسافة بين الفيديوهات */
-  padding: 20px 0;
+   margin-bottom: 20px; /* يعمل مسافة بين الفيديوهات */
+}
+
+/* آخر فيديو من غير margin */
+.reel:last-child {
+  margin-bottom: 0;
 }
 
 .reel {
@@ -430,6 +434,7 @@ body, html {
 }
 
 }
+
 
 
 
