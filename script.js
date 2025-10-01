@@ -116,3 +116,10 @@ class Circle {
     ctx.fill();
   }
 }
+document.addEventListener("DOMContentLoaded", () => {
+  // كل سكشن سكرول (صور + فيديوهات)
+  document.querySelectorAll(".scroll-container, .videos-scroll").forEach(container => {
+    container.scrollLeft = (container.scrollWidth - container.clientWidth) / 2;
+  });
+});
+
