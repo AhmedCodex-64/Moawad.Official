@@ -392,12 +392,12 @@ iframe {
   object-fit: cover;
 }
 
-/* منع الصفحة كلها تتحرك يمين/شمال */
+/* منع أي سكرول للصفحة كلها */
 body, html {
   overflow-x: hidden;
 }
 
-/* الفيديوهات */
+/* حاوية الفيديوهات */
 .videos-scroll {
   display: flex;
   overflow-x: auto;    
@@ -405,8 +405,11 @@ body, html {
   padding: 10px 0;
   max-width: 100%;
   scroll-snap-type: x mandatory;
+
+  justify-content: center; /* يخلي أول فيديو يبدأ من النص */
 }
 
+/* كل فيديو */
 .reel {
   flex: 0 0 auto;
   width: 315px;
@@ -418,6 +421,7 @@ body, html {
   background: #000;
 }
 
+/* iframe جوا الفيديو */
 .reel iframe {
   width: 100%;
   height: 100%;
