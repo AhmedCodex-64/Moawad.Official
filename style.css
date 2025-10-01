@@ -392,17 +392,26 @@ iframe {
   object-fit: cover;
 }
 
-/* ستايل الفيديوهات (ريلز) */
+/* الحاوية الرئيسية للفيديوهات */
+#videos .scroll-container {
+  display: flex;
+  overflow-x: auto;   /* يخلي الفيديوهات تتحرك أفقي */
+  gap: 15px;          /* مسافة بين الفيديوهات */
+  padding: 10px 0;
+}
+
+/* كل فيديو جوه كارد عمودي */
 .scroll-container.videos .reel {
   position: relative;
-  width: 315px;   /* العرض الطبيعي */
-  height: 560px;  /* الطول الطبيعي */
+  width: 315px;   /* عرض الشورتس */
+  height: 560px;  /* طول الشورتس */
   flex-shrink: 0;
   border-radius: 15px;
   overflow: hidden;
   margin: 0 10px;
 }
 
+/* ضبط iframe جوا الكارد */
 .scroll-container.videos .reel iframe {
   position: absolute;
   top: 0;
@@ -411,33 +420,5 @@ iframe {
   height: 100%;
   border: none;
   border-radius: 15px;
-}
-
-
-/* جملة تحت */
-.coming-soon {
-  text-align: center;
-  margin: 40px 0 20px;
-}
-
-.coming-soon p {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.7); /* أبيض شفاف */
-  font-style: italic;
-  letter-spacing: 1px;
-}
-
-#videos .scroll-container {
-  display: flex;
-  overflow-x: auto;
-  gap: 15px; /* مسافة بين الفيديوهات */
-  padding: 10px 0;
-}
-
-#videos .scroll-container iframe {
-  width: 300px;   /* عرض الفيديو */
-  height: 530px;  /* طول الفيديو */
-  flex: 0 0 auto;
-  border-radius: 15px; /* الحواف الكيرف */
 }
 
