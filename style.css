@@ -407,15 +407,16 @@ body, html {
 /* الفيديوهات */
 .videos-scroll {
   display: flex;
-  flex-direction: column;   /* يخلي العناصر تحت بعض */
-  align-items: center;      /* يخليهم في النص */
-  gap: 30px;                /* مسافة بين كل فيديو والتاني */
+  flex-direction: column;   /* يخليهم تحت بعض */
+  align-items: center;      /* يحطهم في النص */
+  gap: 40px;                /* مسافة بين الفيديوهات */
   padding: 20px 0;
 }
 
 .reel {
   width: 315px;
   height: 560px;
+  margin: 0 auto;           /* تأكيد إنهم في النص */
   border-radius: 15px;
   overflow: hidden;
   background: #000;
@@ -427,6 +428,9 @@ body, html {
   border: none;
   border-radius: 15px;
 }
+
+}
+
 
 
 
