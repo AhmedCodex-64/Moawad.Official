@@ -399,28 +399,31 @@ body, html {
   padding: 0;
 }
 
-/* حاوية الفيديو */
 .videos-scroll {
   display: flex;
-  gap: 20px; /* مسافة بين الفيديوهات */
-  overflow-x: auto;
+  gap: 20px;       /* مسافة بين الفيديوهات */
+  overflow-x: auto; 
   padding: 10px 0;
 }
 
 .reel {
-  flex: 0 0 auto; /* يمنع الفيديو من التمدد */
-  width: 360px;    /* عرض الفيديو العمودي */
-  height: 640px;   /* ارتفاع الفيديو العمودي */
-  position: relative;
+  flex: 0 0 auto;   /* منع الفيديو من التمدد */
+  width: 360px;     /* عرض الفيديو العمودي */
+  height: 640px;    /* ارتفاع الفيديو العمودي */
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative; /* لو تحب تحط overlay لاحقاً */
 }
 
 .reel iframe {
-  position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* يحافظ على نسبة العرض للارتفاع */
-  border-radius: 10px; /* اختياري لتجميل الحواف */
+  object-fit: cover; 
+  border-radius: 15px;
+  position: relative; /* غيرنا absolute لـ relative */
 }
+
+
 
 
 
