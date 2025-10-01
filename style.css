@@ -384,7 +384,14 @@ iframe {
   0%   { transform: translateX(0); }
   100% { transform: translateX(10px); }
 }
-/* ستايل الصور */
+/* Scroll الصور */
+.scroll-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
 .scroll-container img {
   border-radius: 15px;
   max-height: 250px;
@@ -392,20 +399,13 @@ iframe {
   object-fit: cover;
 }
 
-/* منع سكرول للصفحة نفسها */
-body, html {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
-
 /* Scroll الفيديوهات */
 .videos-scroll {
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  padding: 10px 0;
   scroll-behavior: smooth;
+  padding: 10px 0;
 }
 .reel {
   flex: 0 0 auto;
@@ -413,13 +413,13 @@ body, html {
   height: 640px;
   border-radius: 15px;
   overflow: hidden;
-  background: #000; /* اختياري */
+  background: #000;
 }
 .reel iframe {
   width: 100%;
   height: 100%;
   border: none;
-  object-fit: cover;
+  object-fit: cover; /* يحافظ على نسبة الريلز */
 }
 
 
